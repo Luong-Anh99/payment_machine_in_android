@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ProductDetail">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:id="@+id/firstCardView"
+        android:layout_height="320dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageViewInfo"
+                android:src="@drawable/greentea"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewInfo"
+                android:text="Drink Name"
+                android:textColor="#9A6262"
+                android:textSize="30sp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:id="@+id/productNameinInfo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$5 per cup"
+                android:textColor="#9A6262"
+                android:id="@+id/productPrice"
+                android:layout_alignRight="@+id/productNameinInfo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_below="@+id/imageViewInfo"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/secondCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstCardView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="150dp"
+            android:gravity="bottom">
+
+
+            <ImageButton
+                android:id="@+id/subquantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/summary"
+                android:layout_marginLeft="140dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/minus" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/summary"
+                android:layout_marginLeft="14dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@+id/subquantity"
+                android:text="1"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+
+            <ImageButton
+                android:id="@+id/addquantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/summary"
+                android:layout_marginLeft="14dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@+id/quantity"
+                android:background="@drawable/plus" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subquantity"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:backgroundTint="#9A7373"
+                android:text="Add to cart"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/descriptioninfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/greentea"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
+
